@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GrandmasterChessFirestoreBlueprint",
+  "description": "Firestore database schema for Grandmaster Chess game history and user sync",
+  "collections": {
+    "/users/{userId}/games": {
+      "description": "User chess game history and analysis sync",
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == userId",
+        "write": "request.auth != null && request.auth.uid == userId"
+      },
+      "properties": {
+        "userId": { "type": "string" },
+        "gameId": { "type": "string" },
+        "opponentName": { "type": "string" },
+        "engineLevel": { "type": "string" },
+        "playerColor": { "type": "string" },
+        "gameResult": { "type": "string" },
+        "movesSan": { "type": "string" },
+        "movesCount": { "type": "integer" },
+        "playerAccuracy": { "type": "integer" },
+        "primaryWeakness": { "type": "string" },
+        "pgn": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      },
+      "required": ["userId", "gameId", "opponentName", "gameResult", "movesSan"]
+    }
+  }
+}

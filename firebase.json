@@ -1,0 +1,8 @@
+{
+  "firestore": [
+    {
+      "database": "ai-studio-android-chessmas-fa9bee05-5978-47ff-a874-73c71a0b8aab",
+      "rules": "firestore.rules"
+    }
+  ]
+}

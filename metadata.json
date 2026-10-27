@@ -1,0 +1,8 @@
+{
+  "name": "ChessMaster Pro",
+  "description": "Master chess with online play, tactical puzzles, game analysis, and personalized coaching to improve your openings and endgame skills.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
